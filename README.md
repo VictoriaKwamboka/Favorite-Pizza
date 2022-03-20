@@ -1,5 +1,4 @@
-### **GODFATHER'S PIZZA**
-****
+
 #### Authors
 [Victoria Kwamboka](https://github.com/VictoriaKwamboka)
 
@@ -8,7 +7,7 @@
 
 #### **Languages Used**
 1. HTML5 
-2.Javascript
+2. Javascript
 3. CSS
 4. Bootstrap
 5. jQuery
