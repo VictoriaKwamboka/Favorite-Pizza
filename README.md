@@ -27,8 +27,9 @@
 #### **Project setup**
 * On your terminal, clone this repo and open your local repo on your text editor
 ```sh
-git clone https://github.com/VictoriaKwamboka/FavoritePizza.git
-cd pizzaShop
+
+git clone https://github.com/VictoriaKwamboka/Favorite-Pizza.git
+cd Favorite-Pizza
 code . (or) atom .
 ```
 
