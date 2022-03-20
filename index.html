@@ -66,7 +66,7 @@
                             <option value="glutten-free">Glutten Free</option>
                         </select>
                         <!-- Label for toppings -->
-                        <label for="toppings">Additional Toppings: </label><br> 
+                        <label for="toppings">Additional Toppings: </label><br>
                         <div class="checkbox">
                             <input type="checkbox" name="toppings" value="onions"> Onions
                         </div>
@@ -82,73 +82,61 @@
 
                         <input type="submit" value="NEXT" class="button" id="continue">
                         <div class="output"></div>
+                    </form>
+                </div>
 
-                    <div class="third-view">
-                        <h2>Confirm Your Order</h2>
-                        <table class="confirm">
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Size</th>
-                                    <th>Crust</th>
-                                    <th>Toppings</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody class="pizza-status">
-                                <tr>
-                                    <td id="type-confirm"></td>
-                                    <td id="size-confirm"></td>
-                                    <td id="crust-confirm"></td>
-                                    <td id="toppings-confirm"></td>
-                                    <td id="total-confirm"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="table-buttons">
-                            <input type="button" value="Want a delivery?" class="button" id="delivery">
-                            <span class="button" id="pick-up">PICK UP</span>
-                            <br>
-                            <input type="submit" value="ADD PIZZA" class="button" id="add">
-                        </div>
+                <div class="third-view">
+                    <h2>Confirm Your Order</h2>
+                    <table class="confirm">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Crust</th>
+                                <th>Toppings</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="pizza-status">
+                            <tr>
+                                <td id="type-confirm"></td>
+                                <td id="size-confirm"></td>
+                                <td id="crust-confirm"></td>
+                                <td id="toppings-confirm"></td>
+                                <td id="total-confirm"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-buttons">
+                        <input type="button" value="Want a delivery?" class="button" id="delivery">
+                        <span class="button" id="pick-up">PICK UP</span>
+                        <br>
+                        <input type="submit" value="ADD PIZZA" class="button" id="add">
                     </div>
+                </div>
+                <div class="forth-view">
+                    <form id="form_2" class="form" name="form_2">
+                        <legend>Have your order delivered at Ksh. 200 </legend>
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" placeholder="Full name here">
+                        <div class="contact">
+                            <label for="telephone">Phone Number</label>
+                            <input type="tel" id="phone-number" placeholder="07** *** ***">
+                        </div>
+                        <div class="address">
+                            <label for="address">Location</label>
+                            <input type="text" id="location" placeholder="Cap estate, Chuna Road-Kitengela">
+                        </div>
+                        <p>Or call us on: 0700 012 987</p>
+
+                        <input type="submit" value="Pay" class="button" id="checkout">
                     </form>
 
                 </div>
 
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-md-12">
-                <form action="php/order.php" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address">
-                    </div>
-                    <div class="form-group">
-                        <label for="pizza">Pizza</label>
-                        <select class="form-control" id="pizza" name="pizza">
-                            <option value="">Select a pizza</option>
-                            <option value="Pepperoni">Pepperoni</option>
-                            <option value="Cheese">Cheese</option>
-                            <option value="Hawaiian">Hawaiian</option>
-                            <option value="Meat Lovers">Meat Lovers</option>
-                            <option value="Veggie">Veggie</option>
-                        </select>
-                    </div>
-                    <div class="form-group --> -->
+        
     </div>
 
 </body>
