@@ -131,3 +131,9 @@ tbody tr:nth-child(even){
 }
 
 
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    body{
+      margin-right: 20px;
+    }
+}
+
