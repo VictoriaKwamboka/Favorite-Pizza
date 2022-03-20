@@ -10,34 +10,34 @@ function Pizza(type, size, crust, toppings) {
 //calculate the total price of the Pizza
 
 let pizzaPrice = function (pizzaSize, pizzaCrust, pizzaToppings) {
-    let sizePrice = 0;
-    if (pizzaSize = "Small") {
-        sizePrice += 500;
-    } else if (pizzaSize = "Medium") {
-        sizePrice += 1000;
-    } else if (pizzaSize = "Large") {
-        sizePrice += 1500;
+    let sizePrice;
+    if (pizzaSize === "Small") {
+        sizePrice = 500;
+    } else if (pizzaSize === "Medium") {
+        sizePrice = 1000;
+    } else if (pizzaSize === "Large") {
+        sizePrice = 1500;
     } else {
-        return ('Please select a size');
+        alert ('Please select a size');
     };
 
-    let crustPrice = 0;
-    if (pizzaCrust = "Crispy") {
-        crustPrice += 150;
-    } else if (pizzaCrust = "Stuffed") {
-        crustPrice += 200;
-    } else if (pizzaCrust = "Gluten Free") {
-        crustPrice += 250;
+    let crustPrice;
+    if (pizzaCrust === "Crispy") {
+        crustPrice = 150;
+    } else if (pizzaCrust === "Stuffed") {
+        crustPrice = 200;
+    } else if (pizzaCrust === "Gluten Free") {
+        crustPrice = 250;
     } else {
         alert('Please select a crust');
     }
 
-    let toppingsPrice = 0;
-    if (pizzaSize == 'Large') {
+    let toppingsPrice;
+    if (pizzaSize === 'Large') {
         toppingsPrice = pizzaToppings.length * 150;
-    } else if (pizzaSize == 'Medium') {
+    } else if (pizzaSize === 'Medium') {
         toppingsPrice = pizzaToppings.length * 100;
-    } else if (pizzaSize == 'Small') {
+    } else if (pizzaSize === 'Small') {
         toppingsPrice = pizzaToppings.length * 50;
     }
 
@@ -77,7 +77,11 @@ $(document).ready(function () {
         let order = new Pizza(pizzaType, pizzaSize, pizzaCrust, pizzaToppings);
         $('.pizza-status').append('<tr><td id= "type-confirm">' + order.preferred_type + '</td><td id ="size-confirm" >' + order.preferred_size + '</td><td id = "crust-confirm">' + order.preferred_crust + '</td><td id = "toppings-confirm">' + order.preferred_toppings + '</td><td id = "total-confirm">' + total);
     
-    
+        //display the total price for pick up
+        $('#self-pick-up').click(function () {
+            let pick_up = $('#delivery-total').text(total);
+            alert('Dear Customer, your order will be ready for pick up in 30 minutes. Thank you for choosing Pizza Hut! your total is: ' + pick-up);
+        });
     });
 
   
