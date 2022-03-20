@@ -1,7 +1,8 @@
 
 body{
-    background-image: url("https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    background-image: url(../images/page1.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
 
 }
@@ -28,14 +29,19 @@ body{
 
 
 .nav ul li a {
+    text-decoration: none;
     color: black;
     padding: 16px 10px;
-    display: block;
-    text-decoration: none;
     font-size: larger;
+    display: block;
     font-weight: 900;
 }
 
 .nav ul li a:hover {
     color: green;
+}
+.main h2{
+    font-size: larger;
+    padding-bottom: 8px;
+    font-family: 'Permanent Marker', cursive;
 }
