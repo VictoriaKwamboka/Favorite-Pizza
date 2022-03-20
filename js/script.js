@@ -18,6 +18,7 @@ let pizzaPrice = function (pizzaSize, pizzaCrust, pizzaToppings) {
     } else if (pizzaSize === "Large") {
         sizePrice = 1500;
     } else {
+        location.reload();
         alert ('Please select a size');
     };
 
@@ -29,6 +30,7 @@ let pizzaPrice = function (pizzaSize, pizzaCrust, pizzaToppings) {
     } else if (pizzaCrust === "Gluten Free") {
         crustPrice = 250;
     } else {
+        location.reload();
         alert('Please select a crust');
     }
 
@@ -80,6 +82,9 @@ $(document).ready(function () {
         //display the total price for pick up
         $('#self-pick-up').click(function () {
             alert('Dear Customer, your order will be ready for pick up in 30 minutes. Thank you for choosing Pizza Hut! your total is: ' + total);
+
+
+            location.reload();
         });
     });
 
