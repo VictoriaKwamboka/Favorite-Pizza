@@ -79,8 +79,7 @@ $(document).ready(function () {
     
         //display the total price for pick up
         $('#self-pick-up').click(function () {
-            let pick_up = $('#delivery-total').text(total);
-            alert('Dear Customer, your order will be ready for pick up in 30 minutes. Thank you for choosing Pizza Hut! your total is: ' + pick-up);
+            alert('Dear Customer, your order will be ready for pick up in 30 minutes. Thank you for choosing Pizza Hut! your total is: ' + total);
         });
     });
 
