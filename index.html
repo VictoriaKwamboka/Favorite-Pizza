@@ -36,8 +36,8 @@
                         <legend>Order here: </legend>
 
                         <label for="pizza">What type of pizza do you want? </label>
-                        <select id="pizza" name="pizza" required>
-                                <option disabled selected>Pizza type</option>
+                        <select id="type" name="type" required>
+                                <option disabled selected>Type</option>
                                 <option value="veggie">Pepperoni</option>
                                 <option value="periperi">Cheese</option>
                                 <option value="mushroom">Meet Lovers</option>
@@ -45,13 +45,21 @@
                                 <option value="steak">Veggie</option>
                                 <option value="pig">Boerewors</option>
                         </select>
-
+                        <!-- check here before submit -->
                         <label for="preferred-size">What size do you prefer?</label>
                         <select id="preferred-size" name="preferred-size" required>
                                 <option disabled selected>Size</option>
                                 <option value="small">Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
+                        </select>
+                        <!-- check here before submit -->
+                        <label for="crust">Which crust do you prefer?</label>
+                        <select id="crust" name="crust" required>
+                                <option disabled selected>Crust</option>
+                                <option value="crispy">Crispy</option>
+                                <option value="stuffed">Stuffed</option>
+                                <option value="glutten-free">Glutten Free</option>
                         </select>
 
                     </form>
