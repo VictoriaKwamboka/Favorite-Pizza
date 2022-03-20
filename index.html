@@ -39,46 +39,54 @@
                     <form action="" class="form" id="form_1" name="form_1">
                         <legend>Order here: </legend>
 
-                        <label for="pizza">What type of pizza do you want? </label>
-                        <select id="type" name="type" required>
-                            <option disabled selected>Type</option>
-                            <option value="veggie">Pepperoni</option>
-                            <option value="periperi">Cheese</option>
-                            <option value="mushroom">Meet Lovers</option>
-                            <option value="hawaiian">Hawaiian</option>
-                            <option value="steak">Veggie</option>
-                            <option value="pig">Boerewors</option>
-                        </select>
+                        <div class="type">
+                            <label for="pizza">What type of pizza do you want? </label>
+                            <select id="type" name="type" required>
+                                <option disabled selected>Type</option>
+                                <option value="veggie">Pepperoni</option>
+                                <option value="periperi">Cheese</option>
+                                <option value="mushroom">Meet Lovers</option>
+                                <option value="hawaiian">Hawaiian</option>
+                                <option value="steak">Veggie</option>
+                                <option value="pig">Boerewors</option>
+                            </select>
+                        </div>
                         <!-- check here before submit -->
-                        <label for="preferred-size">What size do you prefer?</label>
-                        <select id="preferred-size" name="preferred-size" required>
-                            <option disabled selected>Size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                        </select>
+                        <div class="size">
+                            <label for="preferred-size">What size do you prefer?</label>
+                            <select id="preferred-size" name="preferred-size" required>
+                                <option disabled selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
                         <!-- check here before submit -->
-                        <label for="crust">Which crust do you prefer?</label>
-                        <select id="crust" name="crust" required>
-                            <option disabled selected>Crust</option>
-                            <option value="crispy">Crispy</option>
-                            <option value="stuffed">Stuffed</option>
-                            <option value="glutten-free">Glutten Free</option>
-                        </select>
+                        <div class="crust">
+                            <label for="crust">Which crust do you prefer?</label>
+                            <select id="crust" name="crust" required>
+                                <option disabled selected>Crust</option>
+                                <option value="crispy">Crispy</option>
+                                <option value="stuffed">Stuffed</option>
+                                <option value="glutten-free">Glutten Free</option>
+                            </select>
+                        </div>
                         <!-- Label for toppings -->
-                        <label for="toppings">Additional Toppings: </label><br>
-                        <div class="checkbox">
-                            <input type="checkbox" name="toppings" value="onions"> Onions
+                        <div class="toppings">
+                            <label for="toppings">Additional Toppings: </label><br>
+                            <div class="checkbox">
+                                <input type="checkbox" name="toppings" value="onions"> Onions
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="toppings" value="cheese"> Cheese
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="toppings" value="bacon"> Bacon
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms
+                            </div><br>
                         </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="toppings" value="cheese"> Cheese
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="toppings" value="bacon"> Bacon
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms
-                        </div><br>
 
                         <input type="submit" value="NEXT" class="button" id="continue">
                         <div class="output"></div>
@@ -114,7 +122,7 @@
                         <input type="submit" value="ADD PIZZA" class="button" id="add">
                     </div>
                 </div>
-                <div class="forth-view">
+                <div class="fourth-view">
                     <form id="form_2" class="form" name="form_2">
                         <legend>Have your order delivered at Ksh. 200 </legend>
                         <label for="full-name">Full name</label>
@@ -136,7 +144,7 @@
 
             </div>
         </div>
-        
+
     </div>
 
 </body>

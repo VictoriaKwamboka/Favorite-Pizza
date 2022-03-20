@@ -64,13 +64,31 @@ body{
     cursor: pointer;
     border-radius: 12px;
 }
+.form {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .button:hover{
     background-color: #3d1db1;
 }
 
-/* .first-view, .second-view, .third-view{
+/* .first-view, .second-view, .third-view, .fourth-view {
     display: none;
 } */
+
+.type, .size, .crust{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 5px 20px;
+}
+.second-view select {  
+    height: 40px;
+    width: 40%;
+    text-align: center;
+} 
 
 input[type= "text"],
 input[type= "checkbox"],
@@ -88,3 +106,4 @@ input[type= "text"]
     padding-bottom: 20px;
     display: inline-block;
 }
+
