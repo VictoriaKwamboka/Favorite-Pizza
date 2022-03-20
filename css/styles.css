@@ -123,4 +123,10 @@ table{
     padding-bottom: 20px;
     display: inline-block;
 }
+tbody tr:nth-child(odd){
+    background-color: pink;
+}
+tbody tr:nth-child(even){
+    background-color: #2d9e6f;
+}
 
