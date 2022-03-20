@@ -73,15 +73,16 @@ $(document).ready(function () {
         });
 
         let total = pizzaPrice(pizzaSize, pizzaCrust, pizzaToppings);
+        // let grandTotal = sum(total)
         let deliveryTotal = total + 200;
 
         //create a new instance of Pizza
         let order = new Pizza(pizzaType, pizzaSize, pizzaCrust, pizzaToppings);
-        $('.pizza-status').append('<tr><td id= "type-confirm">' + order.preferred_type + '</td><td id ="size-confirm" >' + order.preferred_size + '</td><td id = "crust-confirm">' + order.preferred_crust + '</td><td id = "toppings-confirm">' + order.preferred_toppings + '</td><td id = "total-confirm">' + total);
+        $('.pizza-status').append('<tr><td id= "type-confirm">' + order.preferred_type + '</td><td id ="size-confirm" >' + order.preferred_size + '</td><td id = "crust-confirm">' + order.preferred_crust + '</td><td id = "toppings-confirm">' + order.preferred_toppings + '</td><td id = "total-confirm">' + total+ '<td><button onClick="onClickRemove(this)">Remove</button></td>');
 
         //display the total price for pick up
         $('#self-pick-up').click(function () {
-            alert('Dear Customer, your order will be ready for pick up in 30 minutes. Thank you for choosing Pizza Hut! your total is: ' + total);
+            alert('Thank you for choosing Pizza Hut! Your order will be ready for pick up in 30 minutes.  Your total is: ' + total);
 
 
             location.reload();
@@ -105,19 +106,33 @@ $(document).ready(function () {
 
     $("#add").click(function(event) {
         event.preventDefault();
-
         //Add an extra order
         $(".third-view").hide();
         $(".fourth-view").hide();
         $(".second-view").show();
         document.getElementById("form_1").reset();
-    })
+    });
 
     //Delivery button
     $("#delivery").click(function() {
         $(".table-buttons").hide();
         $(".fourth-view").slideDown();
     })
+
+    // function grandTotal() {
+    //     var table = document.getElementById("confirm");
+    //     let grandTotal = Array.from(table.rows).slice(1).reduce((gtotal, row) => {
+    //       return gtotal + parseFloat(row.cells[1].innerHTML);
+    //     }, 0);
+    //     document.getElementById("grandTotal").innerHTML = "Grand Total = Ksh. " + grandTotal.toFixed(2);
+    //   }
+      
+    //   function onClickRemove(deleteButton) {
+    //     let row = deleteButton.parentElement.parentElement;
+    //     row.parentNode.removeChild(row);
+    //     grandTotal(); 
+    //   }
+    // }
 
 
 

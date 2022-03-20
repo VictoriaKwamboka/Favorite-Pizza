@@ -96,7 +96,7 @@
 
                 <div class="third-view">
                     <h2>Confirm Your Order</h2>
-                    <table class="confirm">
+                    <table class="confirm" id="confirm">
                         <thead>
                             <tr>
                                 <th>Type</th>
@@ -116,6 +116,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <span id="grandTotal"></span>
                     <div class="table-buttons">
                         <input type="button" value="Want a delivery?" class="button" id="delivery">
                         <span class="button" id="self-pick-up">Self Pick Up</span>
@@ -125,7 +126,7 @@
                 </div>
                 <div class="fourth-view">
                     <form id="form_2" class="form" name="form_2">
-                        <legend>Have your order delivered at Ksh. 200 within CBD and Ksh 300 outside CBD.  </legend>
+                        <legend>Have your order delivered at Ksh. 200 within CBD and Ksh 300 outside CBD. </legend>
                         <label for="clientName">Full name</label>
                         <input type="text" id="clientName" placeholder="Full name here">
                         <div class="contact">
