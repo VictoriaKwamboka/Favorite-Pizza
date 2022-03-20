@@ -47,5 +47,33 @@ let pizzaPrice = function(pizzaSize, pizzaCrust, pizzaToppings){
 }
 
 // User interface logic
+$(document).ready(function(){
+    $('#place-order').click(function(){
+        $('.second-view').show();
+        $('.first-view').hide();
+    });
+
+    $('#next').click(function(event){
+        event.preventDefault();
+        $('.third-view').show();
+        $('.second-view').hide();
+    });
+    
+    //get values from selected options
+
+    let pizzaType = $('#type option:selected').val();
+    let pizzaSize = $('#size option:selected').val();
+    let pizzaCrust = $('#crust option:selected').val();
+    let pizzaToppings = [];
+
+    $('input:checkbox[name=toppings]:checked').each(function(){
+        pizzaToppings.push($(this).val());
+    });
+
+    
 
 
+
+
+
+});

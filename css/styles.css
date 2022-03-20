@@ -74,9 +74,9 @@ body{
     background-color: #3d1db1;
 }
 
-/* .first-view, .second-view, .third-view, .fourth-view {
+.second-view, .third-view, .fourth-view {
     display: none;
-} */
+}
 
 .type, .size, .crust{
     display:flex;
