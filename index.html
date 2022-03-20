@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <title>Pizza Hut</title>
 </head>
 
@@ -46,7 +46,7 @@
                                 <option disabled selected>--Type--</option>
                                 <option value="Pepperoni">Pepperoni</option>
                                 <option value="BBQ Chicken">BBQ Chicken</option>
-                                <option value="Ceet lovers">Meet Lovers</option>
+                                <option value="Meat lovers">Meat Lovers</option>
                                 <option value="Hawaiian">Hawaiian</option>
                                 <option value="Veggie">Veggie</option>
                                 <option value="Boerewors">Boerewors</option>
@@ -107,7 +107,7 @@
                             </tr>
                         </thead>
                         <tbody class="pizza-status">
-                            <tr>
+                            <tr id="pizza-row">
                                 <td id="type-confirm"></td>
                                 <td id="size-confirm"></td>
                                 <td id="crust-confirm"></td>
@@ -116,7 +116,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <span id="grandTotal"></span>
+                    <span id="grandTotal"></span> <br>
+
                     <div class="table-buttons">
                         <input type="button" value="Want a delivery?" class="button" id="delivery">
                         <span class="button" id="self-pick-up">Self Pick Up</span>

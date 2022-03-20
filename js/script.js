@@ -8,6 +8,7 @@ function Pizza(type, size, crust, toppings) {
 }
 
 //calculate the total price of the Pizza
+let pizza;
 
 let pizzaPrice = function (pizzaSize, pizzaCrust, pizzaToppings) {
     let sizePrice;
@@ -55,6 +56,7 @@ $(document).ready(function () {
         $('.first-view').hide();
     });
 
+
     $('#next').click(function (event) {
         event.preventDefault();
         $('.third-view').show();
@@ -78,11 +80,29 @@ $(document).ready(function () {
 
         //create a new instance of Pizza
         let order = new Pizza(pizzaType, pizzaSize, pizzaCrust, pizzaToppings);
-        $('.pizza-status').append('<tr><td id= "type-confirm">' + order.preferred_type + '</td><td id ="size-confirm" >' + order.preferred_size + '</td><td id = "crust-confirm">' + order.preferred_crust + '</td><td id = "toppings-confirm">' + order.preferred_toppings + '</td><td id = "total-confirm">' + total+ '<td><button onClick="onClickRemove(this)">Remove</button></td>');
+        $('.pizza-status').append('<tr><td id= "type-confirm">' + order.preferred_type + '</td><td id ="size-confirm" >' + order.preferred_size + '</td><td id = "crust-confirm">' + order.preferred_crust + '</td><td id = "toppings-confirm">' + order.preferred_toppings + '</td><td id = "total-confirm" class = "total-confirm">' + total + '</td></tr>');
+
+
+        var tds = document.getElementById('confirm').getElementsByTagName('td');
+        var grandTotal = 0;
+        for (var i = 0; i < tds.length; i++) {
+            if (tds[i].className === 'total-confirm') {
+                grandTotal += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+            }
+            document.getElementById("grandTotal").innerHTML = "Grand Total = Ksh. " + grandTotal;
+        }
+
+        //this remove button didnt work
+
+        //<td><input type="button" id= "deleteBtn" onclick = "deleteRow(this) "value = "Remove"></td>
+        // function deleteRow(btn) {
+        //     var row = btn.parentNode.parentNode;
+        //     row.parentNode.removeChild(row);
+        // }
 
         //display the total price for pick up
         $('#self-pick-up').click(function () {
-            alert('Thank you for choosing Pizza Hut! Your order will be ready for pick up in 30 minutes.  Your total is: ' + total);
+            alert('Thank you for choosing Pizza Hut! Your order will be ready for pick up in 30 minutes.  Your total is: ' + grandTotal);
 
 
             location.reload();
@@ -104,7 +124,7 @@ $(document).ready(function () {
         });
     });
 
-    $("#add").click(function(event) {
+    $("#add").click(function (event) {
         event.preventDefault();
         //Add an extra order
         $(".third-view").hide();
@@ -114,34 +134,10 @@ $(document).ready(function () {
     });
 
     //Delivery button
-    $("#delivery").click(function() {
+    $("#delivery").click(function () {
         $(".table-buttons").hide();
         $(".fourth-view").slideDown();
     })
-
-    // function grandTotal() {
-    //     var table = document.getElementById("confirm");
-    //     let grandTotal = Array.from(table.rows).slice(1).reduce((gtotal, row) => {
-    //       return gtotal + parseFloat(row.cells[1].innerHTML);
-    //     }, 0);
-    //     document.getElementById("grandTotal").innerHTML = "Grand Total = Ksh. " + grandTotal.toFixed(2);
-    //   }
-      
-    //   function onClickRemove(deleteButton) {
-    //     let row = deleteButton.parentElement.parentElement;
-    //     row.parentNode.removeChild(row);
-    //     grandTotal(); 
-    //   }
-    // }
-
-
-
-
-
-
-
-
-
 
 
 });
