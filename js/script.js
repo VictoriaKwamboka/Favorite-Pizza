@@ -88,7 +88,7 @@ $(document).ready(function () {
         });
 
         //display the total price for delivery and contact information
-        $('#delivery').click(function () {
+        $('#checkout').click(function () {
             let clientName = $('#clientName').val();
             let clientAddress = $('#clientAddress').val();
             let clientLocation = $('#clientLocation').val();
@@ -102,6 +102,23 @@ $(document).ready(function () {
 
         });
     });
+
+    $("#add").click(function(event) {
+        event.preventDefault();
+
+        //Add an extra order
+        $(".third-view").hide();
+        $(".fourth-view").hide();
+        $(".second-view").show();
+        document.getElementById("form_1").reset();
+    })
+
+    //Delivery button
+    $("#delivery").click(function() {
+        $(".table-buttons").hide();
+        $(".fourth-view").slideDown();
+    })
+
 
 
 

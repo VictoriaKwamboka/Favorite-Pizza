@@ -102,6 +102,23 @@ input[type= "text"]
     border-radius: 10px;
     box-sizing: border-box;
 }
+table{
+    border-collapse: collapse;
+    border: #3d1db1;
+}
+.confirm{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid #948473;
+    font-family: 'Rock Salt';
+    text-align: center;
+    table-layout: fixed;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+}
+.confirm tbody{
+    font-family: bold;
+}
 .checkbox{
     padding-bottom: 20px;
     display: inline-block;
