@@ -70,6 +70,14 @@ $(document).ready(function(){
         pizzaToppings.push($(this).val());
     });
 
+    let total = pizzaPrice(pizzaSize, pizzaCrust, pizzaToppings);
+    let deliveryTotal = total + 200;
+
+    //create a new instance of Pizza
+    let order = new Pizza(pizzaType, pizzaSize, pizzaCrust, pizzaToppings);
+    
+
+
     
 
 
